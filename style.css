@@ -95,3 +95,17 @@ body {
     display: grid;
     grid-template-rows: 180px 1fr;
 }
+
+.header {
+    background-color: white;
+    color: black;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+.content {
+    background-color: rgb(226, 222, 222);
+    box-shadow: 
+        inset 0px 11px 8px -10px rgb(104, 100, 100),
+        inset 0px -11px 8px -10px rgb(104, 100, 100); 
+}
