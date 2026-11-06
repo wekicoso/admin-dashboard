@@ -10,6 +10,7 @@
     --background-color-gray: rgb(50, 70, 78);
     --text-color-white: rgb(162, 219, 216);
     --text-color-hover: rgb(255, 255, 255);
+    --content-background-color: rgb(226, 222, 222);
 }
 
 * {
@@ -77,8 +78,6 @@ body {
         }
     }
 
-
-
     .dashboard-title {
         font-size: 1.8rem;
     }
@@ -101,11 +100,95 @@ body {
     color: black;
     display: grid;
     grid-template-rows: 1fr 1fr;
+    padding: 20px 30px;
+
+    svg {
+        width: 35px;
+        height: 35px;
+        fill: black;
+    }
+
+    .header-row-1 {
+        display: grid;
+        grid-template-columns: minmax(150px, 3fr) 1fr;
+        gap: 40px;
+
+        .field-1 {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+
+            input {
+                appearance: none;
+                height: 40%;
+                border-radius: 10px;
+                padding-left: 5px;
+                border: none;
+                flex: 1;
+                background-color: var(--content-background-color);
+            }
+        }
+
+        .field-2 {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 25px;
+
+            img {
+                width: 40px;
+                height: 40px;
+            }
+
+            #name {
+                font-weight: bold;
+            }
+        }
+    }
+
+    .header-row-2 {
+        display: flex;
+        justify-content: space-between;
+
+        .field-1 {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        img {
+            width: 60px;
+            height: 60px;
+        }
+
+        .field-2 {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+
+            button {
+                padding: 15px 30px;
+                border: 0;
+                border-radius: 20px;
+                background-color: var(--background-color-gray);
+                color: var(--text-color-white);
+                font: inherit;
+                letter-spacing: 2px;
+                font-weight: bold;
+
+                &:hover {
+                    color: var(--text-color-hover);
+                    background-color: rgb(79, 109, 121);
+                    cursor: pointer;
+                }
+            }
+        }
+    }
 }
 
 .content {
-    background-color: rgb(226, 222, 222);
-    box-shadow: 
+    background-color: var(--content-background-color);
+    box-shadow:
         inset 0px 11px 8px -10px rgb(104, 100, 100),
-        inset 0px -11px 8px -10px rgb(104, 100, 100); 
+        inset 0px -11px 8px -10px rgb(104, 100, 100);
 }
